@@ -1,14 +1,9 @@
 <?php
-/**
- * Theme constants definition and functions.
- *
- * @since   1.0.0
- * @package Rolling
- */
+define('TEMPLATE_PATH',get_bloginfo('template_url'));
+define('HOME_URL',get_home_url());
+define('BlOG_NAME',get_bloginfo('blog_name'));
+define('SLOGAN', get_bloginfo('description'));
+//add_image_size( 'thumb-service',225,230,true);
+//include 'inc/google_functions.php';
 
-// Constants definition
-define( 'ROLLING_PATH', get_template_directory()     );
-define( 'ROLLING_URL',  get_template_directory_uri() );
-
-// Initialize core file
-require ROLLING_PATH . '/core/init.php';
+add_theme_support('post-thumbnails',array('post','page', 'clients', 'blog', 'products'));
