@@ -48,10 +48,12 @@
 
         $('.smoth-scroll a').on("click", function (e) {
             var anchor = $(this);
+            var anchorid = $(anchor).attr('href');
             $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top - 50
+                scrollTop: $(anchorid).offset().top - 50
             }, 1000);
             e.preventDefault();
+            return false;
         });
 		
 
@@ -178,18 +180,6 @@
 		   
         });
 
-      	$(window).on('load', function(){
-      		var n_opts = {
-      				itemSelector: '.post',
-      				columnWidth: '.grid-sizer',
-      				layoutMode: 'masonry',
-      				percentPosition: true
-      			},
-      			elem = $('.uip-masonry');
-      		
-      		var msnry = new Masonry( elem[0] , n_opts );
-      		
-      	});	
 
 
 

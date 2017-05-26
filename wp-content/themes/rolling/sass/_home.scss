@@ -1,0 +1,104 @@
+.home-section-background .type-wrap p{
+  font-size: 29px;
+}
+@keyframes arrowanimate {
+    0%   {top: 0;}
+    50%  {top: 20px;}
+    100% {top: 0;}
+}
+.arrow-down{
+      position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    a{
+      &:before{
+        position: relative;
+        -webkit-animation-name: arrowanimate;
+      -webkit-animation-duration: 2.5s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-name: arrowanimate;
+      -moz-animation-duration: 2.5s;
+      -moz-animation-iteration-count: infinite;
+      -ms-animation-name: arrowanimate;
+      -ms-animation-duration: 2.5s;
+      -ms-animation-iteration-count: infinite;
+      animation-name: arrowanimate;
+        animation-duration: 2.5s; 
+        animation-iteration-count: infinite;
+      }
+    }
+}
+.about-section{
+  h2{
+    text-align: center;
+    font-size: 36px;
+  }
+  .about-me{
+    padding-top: 40px;
+    text-align: center;
+    h4{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    img{
+      position: relative;
+      width: 130px;
+    }  
+    p{
+      padding: 20px 30px;
+    }
+  }
+  .expandAboutData{
+    padding: 20px;
+    h4{
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.expertise-section{
+  img{
+    width: 130px;
+  }
+  ul{
+    li{
+      width: 50%;
+      padding: 20px;
+      float: left;
+      h3{
+        width: 40%;
+        vertical-align: middle;
+        min-height: 50px;
+        margin-top: 50px;
+        font-size: 28px;
+        float: right;
+      }
+      &.old{
+        h3{
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+}
+.section-title h2{
+  padding-bottom: 20px;
+}
+
+.ourteam-section{
+  background: #f1f1f1;
+  h2{
+    font-size: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  text-align: center;
+  h5{
+    font-weight: bold;
+  }
+}
