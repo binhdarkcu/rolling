@@ -2,7 +2,7 @@
 	    <!-- Home & Menu Section End-->
 		<div id="content">
 			<div class="kc_clfw"></div>
-			<input type="hidden" name="ajaxurl" class="ajaxurl" value="<?php bloginfo('url');?>/wp-admin/admin-ajax.php">
+			<input type="hidden" name="ajaxurl" class="ajaxurl" value="<?php echo HOME_URL;?>/wp-admin/admin-ajax.php">
 			<?php get_template_part('tpl','banner')?>
 
 			<?php get_template_part('tpl','about')?>

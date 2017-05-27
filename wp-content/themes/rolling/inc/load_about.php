@@ -9,9 +9,9 @@ function get_about() {
   	$query_about = get_post($id);
     
 	$urlBanner = wp_get_attachment_url( get_post_thumbnail_id($id) );
-	
-    //echo '$mp3value:'.$mp3value;
-	
+    $lang = qtrans_getLanguage();
+    $title = qtrans_use($lang, $query_about->post_title,false); 
+    $content = qtrans_use($lang, $query_about->post_content,false); 
 	?>
     <div class="row">
     	<div class=" kc_column kc_col-sm-3 ">
@@ -21,11 +21,11 @@ function get_about() {
     	</div>
     	<div class=" kc_column kc_col-sm-9">
     		<div class="credits_details">
-    			<h3><?php echo $query_about->post_title;?></h3>
+    			<h3><?php echo $title;?></h3>
     			
-    			<?php if(!empty($query_about->post_content)){?>
+    			<?php if(!empty($content)){?>
     			<div class="credits_desc noborder" >
-    				<?php echo $query_about->post_content;?>
+    				<?php echo $content?>
     			</div>
     			<?php }?>
     			<div class="credits_controls">

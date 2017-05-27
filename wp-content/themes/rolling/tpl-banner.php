@@ -19,6 +19,6 @@
 		</div>
 	</div>
 	<div class="margin-top-60 smoth-scroll arrow-down">
-		<a class="fa fa-chevron-down" href="<?php echo HOME_URL;?>/#about"></a>
+		<a class="fa fa-chevron-down" href="#about-us"></a>
 	</div>
 </section>

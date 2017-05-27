@@ -46,7 +46,7 @@
 		
        /* Smooth Scroll */
 
-        $('.smoth-scroll a').on("click", function (e) {
+        $('.smoth-scroll a, .arrow-down a').on("click", function (e) {
             var anchor = $(this);
             var anchorid = $(anchor).attr('href');
             $('html, body').stop().animate({
