@@ -6,4 +6,6 @@ define('SLOGAN', get_bloginfo('description'));
 //add_image_size( 'thumb-service',225,230,true);
 //include 'inc/google_functions.php';
 
-add_theme_support('post-thumbnails',array('post','page', 'clients', 'blog', 'products'));
+add_theme_support('post-thumbnails',array('post','page', 'about_content', 'blog', 'products'));
+
+include 'inc/load_about.php';

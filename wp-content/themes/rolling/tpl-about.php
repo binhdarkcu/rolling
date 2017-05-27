@@ -5,37 +5,31 @@
       		 <div class="section-title">
 	      	 	<h2>About Us</h2>
 	      	</div>
-	      	<div class="expandAboutData" style="display: none;">
-	      		<h4>Welcome </h4>
-	      		<div class="expandContent">Using offshore staff is no longer a concept or an ‘Infant Industry’. Banks and multi nationals have used offshore</div>
+	      	<div class="expandAboutData expandData">
+	      		
 	      	</div>
+
+	      	<?php
+		    	$args_about = array(
+		    		'post_type'                     => 'about_content',
+		            'posts_per_page' =>  6 ,
+				    'order'			 => 'asc'
+		    	);
+		    	$abouts = get_posts($args_about);
+		    	foreach ( $abouts as $about ) {
+		    		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $about->ID ), 'single-post-thumbnail');
+		    ?>
 	         <div class=" kc_column kc_col-sm-4">
 	            <div class="kc-col-container">
 	               <div class="kc-elm kc-css-193492 kc_text_block about-me ">
-	               		<img src="assets/images/clock118.png"/>
-	               		<h4>Welcome </h4>
-	                    <p>Using offshore staff is no longer a concept or an ‘Infant Industry’. Banks and multi nationals have used offshore labour for years, and it’s now becoming common place in the SME sector. </p>
+	               		<a href="javascript:void(0)" class="chooselink" id="<?php echo $about->ID;?>"><img src="<?php echo $image[0]?>"/></a>
+	               		<h4><?php echo $about->post_title;?> </h4>
+	                    <?php echo get_field("short_description", $about->ID);?>
 	               </div>
 	            </div>
 	         </div>
-	         <div class=" kc_column kc_col-sm-4">
-	            <div class="kc-col-container">
-	               <div class="kc-elm kc-css-193492 kc_text_block about-me ">
-	               		<img src="assets/images/clock118.png"/>
-	               		<h4>Welcome </h4>
-	                    <p>Using offshore staff is no longer a concept or an ‘Infant Industry’. Banks and multi nationals have used offshore labour for years, and it’s now becoming common place in the SME sector. </p>
-	               </div>
-	            </div>
-	         </div>
-	         <div class=" kc_column kc_col-sm-4">
-	            <div class="kc-col-container">
-	               <div class="kc-elm kc-css-193492 kc_text_block about-me ">
-	               		<img src="assets/images/clock118.png"/>
-	               		<h4>Welcome </h4>
-	                    <p>Using offshore staff is no longer a concept or an ‘Infant Industry’. Banks and multi nationals have used offshore labour for years, and it’s now becoming common place in the SME sector.</p>
-	               </div>
-	            </div>
-	         </div>
+
+	         <?php } ?> 
 	      </div>
 	    </div>
    </div>

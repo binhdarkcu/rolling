@@ -38,6 +38,7 @@
 		<link rel="stylesheet" id="kc-icon-1-css" href="assets/css/icons.css" type="text/css" media="all">
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/jquery-migrate.min.js"></script>
+		<script type="text/javascript" src="assets/js/class.siteMain.js"></script>
 		<meta name="generator" content="WordPress 4.7.5">
 		<meta property="og:site_name" content="One page site">
 		<style type="text/css" id="kc-css-general">.kc-off-notice{display: inline-block !important;}.kc-container{max-width:1170px;}</style>
