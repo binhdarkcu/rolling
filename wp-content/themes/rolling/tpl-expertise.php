@@ -5,37 +5,39 @@
       		 <div class="section-title">
 	      	 	<h2>Expertise</h2>
 	      	</div>
-	      	<div class="expandExpertiseData" style="display: none;">
-	      		<h4>Welcome </h4>
-	      		<div class="expandContent">Using offshore staff is no longer a concept or an ‘Infant Industry’. Banks and multi nationals have used offshore</div>
+	      	<div class="expandExpertiseData expandData kc_col-sm-10">
+	      		
 	      	</div>
 	         <div class=" kc_column kc_col-sm-12">
 	            <div class="kc-col-container">
 	               <ul>
-	               		<li class="old">
-	               			<h3>Design</h3>
-	               			<img src="assets/images/clock118.png"/>
+	               		<?php
+					    	$args_about = array(
+					    		'post_type'                     => 'expertise',
+					            'posts_per_page' =>  -1 ,
+							    'order'			 => 'asc'
+					    	);
+					    	$i=0;
+					    	$abouts = get_posts($args_about);
+					    	foreach ( $abouts as $about ) {
+					    		$i++;
+					    		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $about->ID ), 'single-post-thumbnail');
+					    		if($i%2==0){
+					    ?>
+	               		<li>
+	               			<a href="javascript:void(0)" class="chooseexpertise" id="<?php echo $about->ID?>">
+		               			<h3><?php echo $about->post_title;?></h3>
+		               			<img src="<?php echo $image[0]?>"/>
+		               		</a>
 	               		</li>
-	               		<li class="">
-	               			<img src="assets/images/clock118.png"/>
-	               			<h3>Coding</h3>	               			
+	               		<?php } else { ?>
+						<li class="old">
+							<a href="javascript:void(0)" class="chooseexpertise" id="<?php echo $about->ID?>">
+		               			<img src="<?php echo $image[0]?>"/>
+		               			<h3><?php echo $about->post_title;?></h3>
+		               		</a>
 	               		</li>
-	               		<li class="old">
-	               			<h3>Analytics</h3>
-	               			<img src="assets/images/clock118.png"/>
-	               		</li>
-	               		<li class="">
-	               			<img src="assets/images/clock118.png"/>
-	               			<h3>Bussiness</h3>
-	               		</li>
-	               		<li class="old">
-	               			<h3>Analytics project</h3>
-	               			<img src="assets/images/clock118.png"/>
-	               		</li>
-	               		<li class="">
-	               			<img src="assets/images/clock118.png"/>
-	               			<h3>Training</h3>
-	               		</li>
+	               		<?php } } ?>
 	               </ul>
 	            </div>
 	         </div>

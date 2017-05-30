@@ -1,4 +1,9 @@
-<section data-kc-fullheight="middle-content" id="home" data-kc-parallax="true" class="kc-elm kc-css-980232 kc_row home-section">
+
+<?php
+    $homeid = get_page_by_path('homepage')->ID;
+    $bannerbg = get_field('banner_background', $homeid);
+?>
+<section style="background: url(<?php echo $bannerbg?>) center center/cover no-repeat scroll;" data-kc-fullheight="middle-content" id="home" data-kc-parallax="true" class="kc-elm kc-css-980232 kc_row home-section">
 	<div class="kc-row-container">
 		<div class="kc-wrap-columns">
 			<div class="kc-elm kc-css-41 kc_col-sm-12 kc_column kc_col-sm-12">
@@ -7,8 +12,7 @@
 						<div class="header-text">
 							<div class="type-wrap" style="">
 								<div id="typed-strings">
-									<p>We Do Compliance Hello World</p>
-									<p>so you can take care of your clients</p>
+									<p><?php echo get_field('banner_title', $homeid);?></p>
 								</div>
 							</div>
 							

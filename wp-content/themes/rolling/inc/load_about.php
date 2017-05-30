@@ -5,6 +5,7 @@ add_action( 'wp_ajax_get_about', 'get_about' );
 add_action( 'wp_ajax_nopriv_get_about', 'get_about' );
 function get_about() {
  	$id = $_POST['id'];
+    $expandData = $_POST['expandData'];
   /** Made Query */
   	$query_about = get_post($id);
     
@@ -29,7 +30,7 @@ function get_about() {
     			</div>
     			<?php }?>
     			<div class="credits_controls">
-    				<a href="javascript:void(0);" class="close" onclick="siteMain.closeExpand();"><i class="fa fa-times" aria-hidden="true"></i></a>
+    				<a href="javascript:void(0);" class="close" onclick="siteMain.closeExpand('<?php echo $expandData;?>');"><i class="fa fa-times" aria-hidden="true"></i></a>
     			</div>
     		</div>
     	</div>

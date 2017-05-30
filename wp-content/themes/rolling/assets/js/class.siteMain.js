@@ -10,7 +10,11 @@ var siteMain = (function() {
 	
 	function initEvent(){
 		jQuery('.chooselink').on( 'click', function( e ) {
-			loadExpandContent($(this));
+			loadExpandContent($(this), '.expandAboutData', 'get_about');
+			e.preventDefault();
+		});
+		jQuery('.chooseexpertise').on( 'click', function( e ) {
+			loadExpandContent($(this), '.expandExpertiseData', 'get_about');
 			e.preventDefault();
 		});
 	}
@@ -18,11 +22,11 @@ var siteMain = (function() {
 	function loading_credits(){
 		
 	}
-	function closeExpand(){
-		jQuery('.expandAboutData').animate({'height':'0','overflow':'hidden','padding':"0 !important"},300);
- 		jQuery( '.expandAboutData' ).html('');
+	function closeExpand(expandData){
+		jQuery(expandData).animate({'height':'0','overflow':'hidden','padding':"0 !important"},300);
+ 		jQuery(expandData).html('');
 	}
-	
+
 	function next(){
 		//loadcontentcredit($this);
 	}
@@ -31,7 +35,7 @@ var siteMain = (function() {
 		//loadcontentcredit($this);
 	}
 	
-	function loadExpandContent($this){
+	function loadExpandContent($this, expandData, action){
 		//jQuery('.loading-credit').show();
 		//$this.parent().find('.loading').show();
 		/** Prevent Default Behaviour */
@@ -39,7 +43,7 @@ var siteMain = (function() {
 		/** Get Post ID */
 		var post_id = $this.attr( 'id' );
 		
-		jQuery('.expandAboutData').css('opacity',0);
+		jQuery(expandData).css('opacity',0);
 		 $.ajaxSetup({
             cache: false
         });
@@ -48,15 +52,15 @@ var siteMain = (function() {
 		  url: url_ajax,
 		  type: 'POST',
 		  dataType: 'html',
-		  data: ({ action:'get_about', id:post_id }),
+		  data: ({ action: action, id:post_id, expandData: expandData}),
 		  cache: false
 		})
 		.done(function( html ) {
 		    //var $ajax_response = $( data );
-			jQuery( '.expandAboutData' ).html( html );
-			jQuery('.expandAboutData').css({'height':'auto','overflow':'inherit','padding-bottom':"110px!important"});
-			jQuery('.expandAboutData').animate({'opacity':1},500);														
-			var offset = jQuery('.expandAboutData').offset().top;
+			jQuery( expandData ).html( html );
+			jQuery(expandData).css({'height':'auto','overflow':'inherit','padding-bottom':"110px!important"});
+			jQuery(expandData).animate({'opacity':1},500);														
+			var offset = jQuery(expandData).offset().top;
 
 			jQuery('html, body').animate({scrollTop: offset - 86}, 500);
 		});			

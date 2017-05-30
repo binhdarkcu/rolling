@@ -20,28 +20,24 @@
 	                     <div class="kc_wrapper kc-col-inner-container">
 	                        <div class="kc-elm kc-css-727077 kc_text_block">
 	                           <div class="testimonial-carousel-list">
-	                              <div class="owl-item" style="width: 1080px;">
+	                                <?php
+								    	$args_testimonial = array(
+								    		'post_type'                     => 'testimonial',
+								            'posts_per_page' =>  6 ,
+										    'order'			 => 'asc'
+								    	);
+								    	$testimonials = get_posts($args_testimonial);
+								    	foreach ( $testimonials as $testimonial ) {
+								    		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $testimonial->ID ), 'single-post-thumbnail');
+								    ?>
+	                                <div class="owl-item" style="width: 1080px;">
                                        <div class="testimonial-word text-center">
-                                          <p><img class="alignnone size-full img-responsive" src="assets/images/1.jpg" alt="" width="182" height="182"></p>
-                                          <h2>John doe</h2>
-                                          <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisauteiruredolor in reprehenderit in voluptate.</p>
+                                          <p><img class="alignnone size-full img-responsive" src="<?php echo $image[0];?>" alt="" width="182" height="182"></p>
+                                          <h2><?php echo $testimonial->post_title?></h2>
+                                          <?php echo $testimonial->post_content?>
                                        </div>
                                     </div>
-                                    <div class="owl-item" style="width: 1080px;">
-                                       <div class="testimonial-word text-center">
-                                          <p><img class="alignnone size-full img-responsive" src="assets/images/2.jpg" alt="" width="182" height="182"></p>
-                                          <h2>John doe</h2>
-                                          <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisauteiruredolor in reprehenderit in voluptate.</p>
-                                       </div>
-                                    </div>
-                                    <div class="owl-item" style="width: 1080px;">
-                                       <div class="testimonial-word text-center">
-                                          <p><img class="alignnone size-full img-responsive" src="assets/images/3.jpg" alt="" width="182" height="182"></p>
-                                          <h2>John doe</h2>
-                                          <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisauteiruredolor in reprehenderit in voluptate.</p>
-                                       </div>
-                                    </div>
-	                              
+                                    <?php } ?>
 	                           </div>
 	                        </div>
 	                     </div>

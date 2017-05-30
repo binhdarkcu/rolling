@@ -1,2 +1,26 @@
 header{
+	.language{
+		float: right;
+		    margin-top: 26px;
+		    margin-left: 20px;
+		li{
+			float: left;
+			color: #fff;
+			padding: 0 5px;
+			a{
+				color: #fff;
+				&.active{
+					color: #1bab58;
+					pointer-events: none;
+				}	
+			}
+		}
+	}
+}
+.lang_vi {
+	header{
+		.language {
+			margin-top: 26px;
+		}
+	}
 }
