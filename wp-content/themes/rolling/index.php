@@ -19,30 +19,7 @@
 			<div class="clearfix"></div>
 			<div class="clearfix"></div>
 			<!-- Footer Start -->
-			<footer class="footer-section">
-			   <div class="container">
-			      <div class="row">
-			         <div class="col-md-4 text-left">
-			            <div class="menu-footer-menu-container">
-			               <ul id="footer-menu" class="footer-menu">
-			                  <li id="menu-item-7" class="smoth-scroll menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="http://www.uipasta.com/wordpress-preview/rolling/#about">About Me</a></li>
-			                  <li id="menu-item-8" class="smoth-scroll menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="http://www.uipasta.com/wordpress-preview/rolling/#portfolio">Portfolio</a></li>
-			               </ul>
-			            </div>
-			         </div>
-			         <div class="col-md-4 text-center">
-			            <p>
-			               © Copyright 2017 Rolling               		
-			            </p>
-			         </div>
-			         <div class="col-md-4 uipasta-credit text-right">
-			            <p>
-			               Design By <a href="http://www.uipasta.com/" target="_blank" title="UiPasta">UiPasta</a>                    
-			            </p>
-			         </div>
-			      </div>
-			   </div>
-			</footer>
+			<?php get_footer()?>
 			<!-- Footer End -->
 			<!-- Back to Top Start -->
 			<a href="http://www.uipasta.com/wordpress-preview/rolling/#" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>

@@ -47,3 +47,17 @@ function get_id_by_slug($page_slug, $slug_page_type = 'page') {
     return null;
   }
 }
+
+/**
+ * enqueue scripts and styles 
+ *
+ */
+function my_acf_google_map_api( $api ){
+  
+  $api['key'] = 'AIzaSyBK1kevmPKYUm0SuOm2zOzqU0NFIfeBzFw';
+  
+  return $api;
+  
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

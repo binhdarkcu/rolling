@@ -8,11 +8,11 @@ function get_about() {
     $expandData = $_POST['expandData'];
   /** Made Query */
   	$query_about = get_post($id);
-    
+
 	$urlBanner = wp_get_attachment_url( get_post_thumbnail_id($id) );
     $lang = qtrans_getLanguage();
-    $title = qtrans_use($lang, $query_about->post_title,false); 
-    $content = qtrans_use($lang, $query_about->post_content,false); 
+    $title = qtrans_use($lang, $query_about->post_title,false);
+    $content = qtrans_use($lang, $query_about->post_content,false);
 	?>
     <div class="row">
     	<div class=" kc_column kc_col-sm-3 ">
@@ -22,8 +22,8 @@ function get_about() {
     	</div>
     	<div class=" kc_column kc_col-sm-9">
     		<div class="credits_details">
-    			<h3><?php echo $title;?></h3>
-    			
+    			<h3 style="font-size: 30px;padding-bottom: 20px;font-weight: bold;"><?php echo $title;?></h3>
+
     			<?php if(!empty($content)){?>
     			<div class="credits_desc noborder" >
     				<?php echo $content?>
@@ -35,6 +35,6 @@ function get_about() {
     		</div>
     	</div>
     </div>
-  <?php			
+  <?php
   exit;
 }

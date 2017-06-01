@@ -1,0 +1,22 @@
+@media screen and (max-width: 676px) {
+	.expertise-section ul li {
+		width: 100%;
+	}
+	
+}
+
+
+@media screen and (max-width: 767px) {
+	.kc_column p {
+		padding-bottom: 15px;
+	}
+	.contact-us .kc_col-sm-6 {
+		width: 100%;
+		padding: 10px;
+	}
+	
+}
+
+#our-team a { 
+	color: inherit; 
+} 

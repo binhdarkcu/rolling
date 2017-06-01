@@ -12,9 +12,9 @@ Tags: right-sidebar, custom-background, editor-style, featured-images, flexible-
 */
 
 /*
-   
+
    Table Of Content
-   
+
    1. Global Style
    2. Preloader
    3. Home Section and Navigation Menu
@@ -32,7 +32,7 @@ Tags: right-sidebar, custom-background, editor-style, featured-images, flexible-
   15. Scroll To Top
   16. Useful Classes ( Such as : Margin, Padding, colors  "This classes will be helpful for you during designing/development time.")
   17. UiPasta Credit
- 
+
 
 */
 
@@ -46,8 +46,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -57,7 +57,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -68,7 +68,7 @@ body {
 	line-height: 24px;
 	letter-spacing: 1px;
 	height: 100%;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 html, body {
 	height: 100%
@@ -84,7 +84,7 @@ html, body {
 }
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.428;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin: 0 0 0.5em;
 }
 h1 {
@@ -157,7 +157,7 @@ blockquote, q {
 	padding: 30px 25px 30px 60px;
 	margin-bottom: 20px;
 	position: relative;
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-style: italic;
 	display: block;
 }
@@ -419,7 +419,7 @@ input[type="submit"]:not(.button-style) {
 	transition: all 0.3s;
 }
 .button.fa {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 }
 .button:after {
@@ -603,9 +603,9 @@ body.loaded #preloader {
 	transition: .3s;
 	font-weight: 600;
 }
-.navigation-menu .navbar-nav > li > a { 
+.navigation-menu .navbar-nav > li > a {
 	padding: 30px 15px;
-}	
+}
 .navigation-menu .navbar-nav li a:hover {
 	background: none;
 	color: #fff;
@@ -1767,4 +1767,3 @@ nav.text-center {
 .uipasta-credit a:hover {
 	color: #ffffff;
 }
-

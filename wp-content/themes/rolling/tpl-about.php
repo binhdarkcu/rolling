@@ -3,10 +3,17 @@
       <div class="kc-wrap-columns">
       	<div class="section-space-padding kc_column kc_col-sm-12">
       		 <div class="section-title">
-	      	 	<h2>About Us</h2>
+                 <?php
+                    $lang = qtrans_getLanguage();
+                    if($lang == 'en'){
+                 ?>
+      	 	       <h2>About Us</h2>
+                <?php } else {?>
+                    <h2>Về chúng tôi</h2>
+                <?php }?>
 	      	</div>
 	      	<div class="expandAboutData expandData">
-	      		
+
 	      	</div>
 
 	      	<?php
@@ -29,7 +36,7 @@
 	            </div>
 	         </div>
 
-	         <?php } ?> 
+	         <?php } ?>
 	      </div>
 	    </div>
    </div>
